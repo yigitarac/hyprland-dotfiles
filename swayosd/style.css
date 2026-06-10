@@ -1,0 +1,29 @@
+/* Ana Kutu (Kapsül) */
+window {
+    background: rgba(40, 40, 40, 0.9); /* Gruvbox Koyu Arka Plan */
+    border-radius: 20px;
+    border: 2px solid #504945;
+}
+
+/* İkonlar ve Yazılar */
+osd {
+    color: #ebdbb2; /* Gruvbox Krem Rengi */
+}
+
+/* Çubuğun Boş (Arka) Kısmı */
+progressbar, trough {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* Çubuğun Dolu Kısmı (Ses/Parlaklık seviyesi) */
+progress {
+    background: #d79921; /* Gruvbox Sarı Dolgu */
+    border-radius: 10px;
+}
+
+/* Sadece İkonlar (Logolar) İçin Zorunlu Krem Rengi */
+image {
+    color: #ebdbb2;
+    opacity: 1;
+}

@@ -1,0 +1,31 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/gruvbox.toml"
+]
+
+[window]
+# Terminalin varsayılan açılış boyutu (Piksel değil, sütun ve satır sayısıdır)
+dimensions = { columns = 100, lines = 25 }
+
+# İçerik ile pencere kenarları arasındaki boşluk (İşte o yapışık durmayı bu çözecek)
+padding = { x = 15, y = 15 }
+
+# Pencere yeniden boyutlandırıldığında boşlukların orantılı kalmasını sağlar
+dynamic_padding = true
+
+# (Opsiyonel) Pencere kenarlığını ve başlık çubuğunu gizlemek istersen "None" yapabilirsin
+# decorations = "None" 
+
+[keyboard]
+# Kısayol atamaları
+bindings = [
+    # Ctrl + Shift + W ile terminali kapat
+    { key = "W", mods = "Control|Shift", action = "Quit" },
+    
+    # Ctrl + Shift + N ile yeni bir Alacritty penceresi aç
+    { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" },
+    
+    # Kopyalama ve Yapıştırma (Genelde varsayılan çalışır ama garantiye alalım)
+    { key = "C", mods = "Control|Shift", action = "Copy" },
+    { key = "V", mods = "Control|Shift", action = "Paste" },
+]

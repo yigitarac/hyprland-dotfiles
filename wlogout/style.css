@@ -1,0 +1,60 @@
+window {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14pt;
+    color: #ebdbb2; /* Gruvbox Krem */
+    background-color: rgba(40, 40, 40, 0.9); /* Gruvbox Koyu Arka Plan */
+}
+
+button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    border: none;
+    background-color: rgba(
+        60,
+        56,
+        54,
+        0.8
+    ); /* Gruvbox Buton Arka Planı (#3c3836) */
+    margin: 5px;
+    border-radius: 20px; /* Köşeleri yuvarlatma */
+    transition:
+        box-shadow 0.2s ease-in-out,
+        background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: rgba(
+        215,
+        153,
+        33,
+        0.7
+    ); /* Üzerine gelince Gruvbox Sarısı (#d79921) */
+    outline: none;
+}
+
+button:focus {
+    background-color: #fabd2f; /* Odaklanınca Açık Sarı */
+    color: #282828;
+    outline: none;
+}
+
+/* İkon yolları - Varsayılan ikonları kullanır */
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"));
+}
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"));
+}
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"));
+}
+#hibernate {
+    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"));
+}
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"));
+}
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"));
+}

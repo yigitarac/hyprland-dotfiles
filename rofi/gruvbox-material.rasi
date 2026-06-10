@@ -1,0 +1,118 @@
+* {
+    bg0: #282828;
+    bg1: #32302f;
+    grey0: #7c6f64;
+    fg0: #d4be98;
+    blue: #7daea3;
+    red: #ea6962;
+    orange: #d79921;
+    green: #a9b665;
+    bgStatusline3: #504945;
+
+    background-color: transparent; /* Köşelerdeki siyah blokları yok eder */
+}
+
+window {
+    /* height: 600; ---> BU BELAYI SİLDİK, ARTIK İÇİNDEKİ KADAR UZAYACAK */
+    width: 600;
+    background-color: @bg0;
+    border: 2px; /* 1 yerine 2 piksel çok daha tok durur */
+    border-radius: 10px;
+    border-color: @bgStatusline3;
+}
+
+mainbox {
+    spacing: 0;
+    children: [inputbar, message, listview];
+}
+
+inputbar {
+    color: @fg0;
+    padding: 14px;
+    background-color: @bg0;
+}
+
+message {
+    padding: 10px;
+    background-color: @grey0;
+}
+
+listview {
+    lines: 7;
+    padding: 8px;
+    border-radius: 0 0 10px 10px;
+    border: 2px;
+    border-color: @bg0;
+    background-color: @bg0;
+    
+    /* İŞTE KRİTİK AYAR: Güç menüsünde boşlukları yok edip kutuyu daraltır */
+    dynamic: true; 
+}
+
+textbox {
+    text-color: @fg0;
+    background-color: inherit;
+}
+
+error-message {
+    border: 20px;
+}
+
+entry, prompt, case-indicator {
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0 10px 0 0;
+    text-color: @orange; /* drun/run başlıkları turuncu olsun ki şık dursun */
+}
+
+element {
+    padding: 8px; /* 5'ten 8'e çıkardık, satırlar arası biraz nefes alsın */
+    vertical-align: 0.5;
+    border-radius: 8px;
+    background-color: @bg1;
+}
+
+/* Seçili öğeyi soluk gri değil, efsanevi Gruvbox Turuncusu yapıyoruz */
+element.selected.normal {
+    background-color: @orange;
+}
+
+/* Seçili öğenin yazısı ve ikonu koyu olsun ki okunabilsin */
+element.selected.normal element-text,
+element.selected.normal element-icon {
+    text-color: @bg0;
+}
+
+element.alternate.normal {
+    background-color: inherit;
+}
+
+element.normal.active, element.alternate.active {
+    background-color: @green;
+}
+
+element.selected.active {
+    background-color: @green;
+}
+
+element.normal.urgent, element.alternate.urgent {
+    background-color: @red;
+}
+
+element.selected.urgent {
+    background-color: @blue;
+}
+
+element-text, element-icon {
+    size: 32px; /* 40 piksel kaba durur, 32 piksel göze daha estetik gelir */
+    margin: 0 10px 0 0;
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color: @fg0;
+}
+
+element-text .active, element-text .urgent {
+    text-color: @bg0;
+}

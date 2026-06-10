@@ -1,0 +1,102 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 38,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["group/merkez"],
+    "modules-right": ["group/system"],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        },
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "default": "",
+            "active": "󰮤"
+        }
+    },
+
+    "group/system": {
+        "orientation": "horizontal",
+        "modules": ["tray"]
+    },
+
+    "group/merkez": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 400,
+            "transition-left-to-right": false
+        },
+        "modules": ["clock", "custom/prev", "custom/play", "custom/next", "mpris"]
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%d %B %Y, %A}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "today": "<span color='#bf616a'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+
+    "custom/prev": {
+        "format": "{}",
+        "exec": "playerctl status 2>/dev/null | sed -e 's/.*//'",
+        "interval": 1,
+        "on-click": "playerctl previous",
+        "tooltip": false
+    },
+
+    "custom/play": {
+        "format": "{}",
+        "exec": "playerctl status 2>/dev/null | sed -e 's/Playing//' -e 's/Paused//' -e 's/Stopped//'",
+        "interval": 1,
+        "on-click": "playerctl play-pause",
+        "tooltip": false
+    },
+
+    "custom/next": {
+        "format": "{}",
+        "exec": "playerctl status 2>/dev/null | sed -e 's/.*//'",
+        "interval": 1,
+        "on-click": "playerctl next",
+        "tooltip": false
+    },
+
+    "mpris": {
+        "format": "{player_icon}   {dynamic}",
+        "format-paused": "{player_icon}   <i>{dynamic}</i>",
+        "player-icons": {
+            "default": "",
+            "spotify": "",
+            "firefox": ""
+        },
+        "max-length": 35
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    }
+}

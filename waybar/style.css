@@ -1,0 +1,109 @@
+* {
+    font-family:
+        "JetBrainsMono Nerd Font", "JetBrains Mono", "Symbols Nerd Font",
+        sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+window#waybar {
+    background-color: rgba(20, 20, 20, 0.85);
+}
+
+/* Tek parça bar */
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0 6px;
+}
+
+/* Workspace ikonları: sola yaklaş, boşlukları daralt */
+#workspaces {
+    padding-left: 2px;
+    margin-left: -4px;
+}
+
+#workspaces button {
+    min-width: 18px;
+    min-height: 18px;
+    padding: 0 4px;
+    margin: 0 2px;
+    border-radius: 6px;
+    color: #ebdbb2;
+    font-size: 15px;
+    background: transparent;
+    transition: all 0.15s ease;
+}
+
+/* Aktif workspace: arka plan yok, ikon beyaz/parlak */
+#workspaces button.active {
+    background: transparent;
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.55);
+}
+
+/* Hover: hafif parlama */
+#workspaces button:hover {
+    background: transparent;
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.45);
+}
+
+/* Merkez modül: dokunulmadı */
+#clock,
+#custom-prev,
+#custom-play,
+#custom-next,
+#mpris {
+    background-color: transparent;
+}
+
+#clock {
+    color: white; /* Gruvbox krem rengi, yazıyı hep aydınlık tutar */
+}
+
+/* Tray sade */
+#tray {
+    background-color: transparent;
+    padding: 0 4px;
+    margin: 0 6px;
+    color: #ebdbb2;
+}
+
+/* Tray ikonları workspace ile aynı boy */
+#tray * {
+    font-size: 15px;
+    color: #ebdbb2;
+}
+
+/* Medya kontrol ikonları */
+#custom-prev,
+#custom-play,
+#custom-next {
+    color: #ebdbb2;
+    font-size: 18px;
+    padding: 0 8px;
+    transition: all 0.2s ease;
+}
+
+#custom-prev:hover,
+#custom-play:hover,
+#custom-next:hover {
+    color: #d79921;
+    text-shadow: 0 0 5px rgba(215, 153, 33, 0.4);
+}
+
+#mpris {
+    padding-left: 10px;
+    padding-right: 15px;
+    color: #98971a;
+    font-weight: bold;
+}
+
+#mpris.paused {
+    color: #a89984;
+}

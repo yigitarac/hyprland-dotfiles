@@ -1,0 +1,77 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-weight: bold;
+}
+
+.control-center {
+    background-color: rgba(40, 40, 40, 0.95); /* Gruvbox Koyu Arka Plan */
+    border: 2px solid #504945;
+    border-radius: 12px;
+}
+
+.widget-title {
+    color: #d79921; /* Gruvbox Sarı */
+    font-size: 18px;
+    margin: 10px;
+}
+
+.widget-title > button {
+    background-color: #cc241d; /* Gruvbox Kırmızı Silme Butonu */
+    color: #ebdbb2;
+    border-radius: 8px;
+    padding: 5px 10px;
+    border: none;
+}
+
+.widget-title > button:hover {
+    background-color: #fb4934;
+}
+
+.widget-dnd {
+    background-color: #3c3836;
+    margin: 10px;
+    border-radius: 8px;
+    color: #ebdbb2;
+}
+
+.widget-dnd > switch {
+    border-radius: 8px;
+    background: #504945;
+}
+
+.widget-dnd > switch:checked {
+    background: #98971a; /* Açıkken Gruvbox Yeşili */
+}
+
+/* Ses ve Parlaklık Çubukları */
+.widget-volume, .widget-backlight {
+    background-color: #3c3836;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    color: #ebdbb2;
+}
+
+scale trough {
+    background-color: #504945;
+    border-radius: 8px;
+    min-height: 10px;
+}
+
+scale highlight {
+    background-color: #d79921; /* Gruvbox Sarı Bar */
+    border-radius: 8px;
+}
+
+/* Medya Oynatıcı (MPRIS) */
+.widget-mpris {
+    background-color: #3c3836;
+    margin: 10px;
+    border-radius: 8px;
+    padding: 10px;
+    color: #ebdbb2;
+}
+
+.widget-mpris-title {
+    color: #d79921;
+}
